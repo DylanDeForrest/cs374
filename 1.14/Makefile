@@ -1,4 +1,4 @@
-TARGETS=mymkdir
+TARGETS=myls
 
 .PHONY: all clean
 
