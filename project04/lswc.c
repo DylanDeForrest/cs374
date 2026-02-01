@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
     int write_p = pfds[1];
     
     if (pid == 0){
-        // child process 
+        // child  
         dup2(read_p, STDIN_FILENO);
 
         close(write_p);
