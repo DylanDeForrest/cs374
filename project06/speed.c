@@ -55,10 +55,17 @@ int main(void)
         if (n <= 0)
             break;
 
-        for (ssize_t i = 0; i < n; i++) {
-            if (buf[i] == '+') { speed++; printf("increase speed to: %d\n", speed); }
-            else if (buf[i] == '-') { if (speed > SPEED_MIN) speed--; printf("decrease speed to: %d\n", speed); }
-            else if (buf[i] == 'q') return 0;
+            for (ssize_t i = 0; i < n; i++) {
+            if (buf[i] == '+') {
+                speed++;
+                printf("increase speed to: %d\n", speed);
+            } else if (buf[i] == '-') {
+                if (speed > SPEED_MIN)
+                    speed--;
+                printf("decrease speed to: %d\n", speed);
+            } else if (buf[i] == 'q') {
+                return 0;
+            }
         }
     }
 
